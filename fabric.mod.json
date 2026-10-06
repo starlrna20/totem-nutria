@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
-  "id": "supertotem",
+  "id": "totemastral",
   "version": "${version}",
-  "name": "Super Totem",
-  "description": "Anade el Totem Supremo: 2 corazones extra y Velocidad II infinita mientras lo llevas encima.",
+  "name": "Totem Astral",
+  "description": "Anade el Totem Astral: 2 corazones extra y Velocidad II infinita mientras lo llevas encima.",
   "environment": "*",
-  "entrypoints": { "main": ["com.supertotem.SuperTotemMod"] },
+  "entrypoints": { "main": ["com.totemastral.TotemAstralMod"] },
   "depends": {
     "fabricloader": ">=0.16.0",
     "minecraft": "~1.21.4",
