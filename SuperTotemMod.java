@@ -78,7 +78,7 @@ public class SuperTotemMod implements ModInitializer {
 
     /** Mientras el jugador lleve el totem en cualquier parte del inventario: +2 corazones y Velocidad II infinita. */
     private static void updateBuffs(ServerPlayer p) {
-        boolean has = p.getInventory().contains(s -> s.is(SUPREME_TOTEM));
+        boolean has = p.getOffhand().contains(s -> s.is(Totem_Astral));
 
         AttributeInstance hp = p.getAttribute(Attributes.MAX_HEALTH);
         if (hp != null) {
