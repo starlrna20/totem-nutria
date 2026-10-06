@@ -1,1 +1,1 @@
-{ "parent": "minecraft:item/generated", "textures": { "layer0": "supertotem:item/supreme_totem" } }
+{ "parent": "minecraft:item/generated", "textures": { "layer0": "supertotem:item/Totem_Astral" } }
