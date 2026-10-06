@@ -1,4 +1,4 @@
-package com.supertotem;
+package com.TotemAstral;
 
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.entity.event.v1.ServerLivingEntityEvents;
@@ -26,7 +26,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.component.DeathProtection;
 
-public class SuperTotemMod implements ModInitializer {
+public class TotemAstralByImStarD implements ModInitializer {
     public static final String MOD_ID = "Totem_Astral";
 
     /** Probabilidad de drop al matar un evoker de una raid: 0,5 %. */
