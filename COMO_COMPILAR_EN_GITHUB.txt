@@ -1,0 +1,8 @@
+1. Crea una cuenta gratis en https://github.com
+2. Crea un repositorio nuevo (boton "New"), con cualquier nombre.
+3. Sube TODO el contenido de esta carpeta (arrastra los archivos a la pagina del repositorio).
+   IMPORTANTE: la carpeta oculta ".github" tambien debe subirse (con .github/workflows/build.yml).
+4. Ve a la pestana "Actions". El build empieza solo (tarda 3-5 minutos).
+5. Cuando salga con check verde, entra en esa ejecucion y baja "supertotem-mod" (abajo, en Artifacts).
+6. Dentro del zip esta supertotem-1.0.0.jar (usa ese, NO el -sources). Ponlo en tu carpeta mods.
+Si el build sale en rojo, copiame el error y lo corrijo.
