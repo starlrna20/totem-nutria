@@ -92,14 +92,14 @@ public class SuperTotemMod implements ModInitializer {
             }
         }
 
-        MobEffectInstance cur = p.getEffect(MobEffects.SPEED);
+        MobEffectInstance cur = p.getEffect(MobEffects.MOVEMENT_SPEED);
         if (has) {
             if (cur == null || cur.getAmplifier() < SPEED_AMPLIFIER) {
-                p.addEffect(new MobEffectInstance(MobEffects.SPEED,
+                p.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED,
                         MobEffectInstance.INFINITE_DURATION, SPEED_AMPLIFIER, true, false, true));
             }
         } else if (cur != null && cur.isInfiniteDuration() && cur.getAmplifier() == SPEED_AMPLIFIER) {
-            p.removeEffect(MobEffects.SPEED);
+            p.removeEffect(MobEffects.MOVEMENT_SPEED);
         }
     }
 }
