@@ -27,7 +27,7 @@ import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.component.DeathProtection;
 
 public class SuperTotemMod implements ModInitializer {
-    public static final String MOD_ID = "supertotem";
+    public static final String MOD_ID = "Totem_Astral";
 
     /** Probabilidad de drop al matar un evoker de una raid: 0,5 %. */
     public static final double DROP_CHANCE = 0.005;
@@ -39,14 +39,14 @@ public class SuperTotemMod implements ModInitializer {
     private static final ResourceLocation HEALTH_MODIFIER_ID =
             ResourceLocation.fromNamespaceAndPath(MOD_ID, "extra_hearts");
 
-    public static Item SUPREME_TOTEM;
+    public static Item Totem_Astral;
     private int tick = 0;
 
     @Override
     public void onInitialize() {
         // --- Objeto: se comporta como el totem normal (death_protection) y brilla para distinguirlo ---
         ResourceKey<Item> key = ResourceKey.create(Registries.ITEM,
-                ResourceLocation.fromNamespaceAndPath(MOD_ID, "supreme_totem"));
+                ResourceLocation.fromNamespaceAndPath(MOD_ID, "Totem_Astral"));
         SUPREME_TOTEM = Registry.register(BuiltInRegistries.ITEM, key,
                 new Item(new Item.Properties()
                         .setId(key)
@@ -56,7 +56,7 @@ public class SuperTotemMod implements ModInitializer {
                         .component(DataComponents.ENCHANTMENT_GLINT_OVERRIDE, true)));
 
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.COMBAT)
-                .register(entries -> entries.accept(SUPREME_TOTEM));
+                .register(entries -> entries.accept(Totem_Astral));
 
         // --- Drop: 0,5 % al matar (un jugador) un evoker mientras hay una raid activa cerca ---
         ServerLivingEntityEvents.AFTER_DEATH.register((entity, source) -> {
@@ -66,7 +66,7 @@ public class SuperTotemMod implements ModInitializer {
             if (level.getRaids().getNearbyRaid(evoker.blockPosition(), 9216) == null) return;
             if (level.random.nextDouble() >= DROP_CHANCE) return;
             level.addFreshEntity(new ItemEntity(level,
-                    evoker.getX(), evoker.getY(), evoker.getZ(), new ItemStack(SUPREME_TOTEM)));
+                    evoker.getX(), evoker.getY(), evoker.getZ(), new ItemStack(Totem_Astral)));
         });
 
         // --- Buffs: se revisan 1 vez por segundo (muy ligero) ---
